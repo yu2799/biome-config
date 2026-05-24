@@ -5,6 +5,7 @@
   "editor.detectIndentation": false,
   "editor.indentSize": 2,
   "editor.tabSize": 2,
+  "editor.codeActionsOnSave": { "source.biome": "explicit" },
   "cSpell.words": [
     "maru",
     "Metavariables",
