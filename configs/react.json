@@ -1,0 +1,50 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "overrides": [
+    {
+      "includes": ["**/*.tsx"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noChildrenProp": "error",
+            "noNestedComponentDefinitions": "error",
+            "noReactPropAssignments": "error",
+            "noRenderReturnValue": "error",
+            "useExhaustiveDependencies": "error",
+            "useHookAtTopLevel": "error",
+            "useJsxKeyInIterable": "error",
+            "useUniqueElementIds": "error"
+          },
+          "nursery": {
+            "noComponentHookFactories": "error",
+            "noDuplicatedSpreadProps": "error",
+            "noJsxLeakedDollar": "error",
+            "noJsxNamespace": "error",
+            "noJsxPropsBind": "error",
+            "noLeakedRender": "error",
+            "noReactStringRefs": "error",
+            "noSyncScripts": "error",
+            "noUnknownAttribute": "error",
+            "useReactAsyncServerFunction": "error"
+          },
+          "security": {
+            "noDangerouslySetInnerHtml": "error",
+            "noDangerouslySetInnerHtmlWithChildren": "error"
+          },
+          "style": {
+            "useComponentExportOnlyModules": "error",
+            "useFragmentSyntax": "error",
+            "useReactFunctionComponents": "error",
+            "noJsxLiterals": "off"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "error",
+            "noDuplicateJsxProps": "error",
+            "noReactForwardRef": "error",
+            "noSuspiciousSemicolonInJsx": "error"
+          }
+        }
+      }
+    }
+  ]
+}

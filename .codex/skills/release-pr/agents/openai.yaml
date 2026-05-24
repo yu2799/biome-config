@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release PR"
+  short_description: "Create develop-to-main release PRs for this repository."
+  default_prompt: "Create a release PR"

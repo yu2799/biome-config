@@ -1,0 +1,47 @@
+{
+  "name": "@yu21/biome-config",
+  "version": "1.0.0",
+  "description": "Shareable Biome configuration presets.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yu2799/biome-config.git"
+  },
+  "homepage": "https://github.com/yu2799/biome-config#readme",
+  "bugs": {
+    "url": "https://github.com/yu2799/biome-config/issues"
+  },
+  "packageManager": "pnpm@11.2.2",
+  "keywords": ["biome", "biome-config", "formatter", "linter", "react"],
+  "exports": {
+    ".": "./configs/base.json",
+    "./base": "./configs/base.json",
+    "./react": "./configs/react.json",
+    "./project": "./configs/project.json",
+    "./playwright": "./configs/playwright.json",
+    "./test": "./configs/test.json",
+    "./types": "./configs/types.json"
+  },
+  "files": ["CHANGELOG.md", "configs/*.json"],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "scripts": {
+    "check": "biome ci .",
+    "pack:dry-run": "npm pack --dry-run --cache .npm-cache",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": ">=2.4.15 <3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15",
+    "@changesets/cli": "2.31.0",
+    "@changesets/config": "3.1.4"
+  }
+}

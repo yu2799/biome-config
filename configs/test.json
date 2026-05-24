@@ -1,0 +1,58 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "overrides": [
+    {
+      "includes": [
+        "**/*.{test,spec}.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
+        "**/__tests__/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}"
+      ],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noExcessiveNestedTestSuites": "error"
+          },
+          "nursery": {
+            "noConditionalExpect": "error",
+            "noIdenticalTestTitle": "error",
+            "useConsistentTestIt": "error",
+            "useExpect": "error",
+            "useTestHooksInOrder": "error",
+            "useTestHooksOnTop": "error"
+          },
+          "suspicious": {
+            "noDuplicateTestHooks": "error",
+            "noExportsInTest": "error",
+            "noFocusedTests": "error",
+            "noSkippedTests": "error"
+          }
+        }
+      },
+      "javascript": {
+        "globals": [
+          "after",
+          "afterAll",
+          "afterEach",
+          "before",
+          "beforeAll",
+          "beforeEach",
+          "context",
+          "describe",
+          "expect",
+          "it",
+          "run",
+          "setup",
+          "specify",
+          "suite",
+          "suiteSetup",
+          "suiteTeardown",
+          "teardown",
+          "test",
+          "xcontext",
+          "xdescribe",
+          "xit",
+          "xspecify"
+        ]
+      }
+    }
+  ]
+}

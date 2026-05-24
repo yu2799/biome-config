@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["./configs/base.json"],
+  "files": {
+    "includes": [
+      "!node_modules",
+      "!.tmp",
+      "!.npm-cache",
+      "!.pnpm-store",
+      "!package-lock.json"
+    ]
+  }
+}

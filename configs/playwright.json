@@ -1,0 +1,28 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "overrides": [
+    {
+      "includes": [
+        "**/*.{spec,test,e2e,pw}.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
+        "**/{e2e,playwright}/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}"
+      ],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "noPlaywrightElementHandle": "error",
+            "noPlaywrightEval": "error",
+            "noPlaywrightForceOption": "error",
+            "noPlaywrightMissingAwait": "error",
+            "noPlaywrightNetworkidle": "error",
+            "noPlaywrightPagePause": "error",
+            "noPlaywrightUselessAwait": "error",
+            "noPlaywrightWaitForNavigation": "error",
+            "noPlaywrightWaitForSelector": "error",
+            "noPlaywrightWaitForTimeout": "error",
+            "usePlaywrightValidDescribeCallback": "error"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "overrides": [
+    {
+      "includes": ["**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noPrivateImports": "error",
+            "noUndeclaredDependencies": "error",
+            "noUnresolvedImports": "error",
+            "useImportExtensions": "error",
+            "useJsonImportAttributes": "error"
+          },
+          "suspicious": {
+            "noDeprecatedImports": "error",
+            "noImportCycles": "error"
+          },
+          "nursery": {
+            "noUntrustedLicenses": "off"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "overrides": [
+    {
+      "includes": ["**/*.{ts,tsx,mts,cts}"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "noBaseToString": "error",
+            "noFloatingPromises": "error",
+            "noMisleadingReturnType": "error",
+            "noMisusedPromises": "error",
+            "noUnnecessaryConditions": "error",
+            "noUnsafePlusOperands": "error",
+            "noUselessTypeConversion": "error",
+            "useArraySortCompare": "error",
+            "useAwaitThenable": "error",
+            "useConsistentEnumValueType": "error",
+            "useDisposables": "error",
+            "useExhaustiveSwitchCases": "error",
+            "useFind": "error",
+            "useNullishCoalescing": "error",
+            "useRegexpExec": "error",
+            "useStringStartsEndsWith": "error"
+          }
+        }
+      }
+    }
+  ]
+}
