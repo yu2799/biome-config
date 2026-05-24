@@ -253,7 +253,7 @@
       },
       "style": {
         "noCommonJs": "error",
-        "noDefaultExport": "error",
+        "noDefaultExport": "off",
         "noDescendingSpecificity": "error",
         "noDoneCallback": "error",
         "noEnum": "error",
