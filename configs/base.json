@@ -188,7 +188,7 @@
         "noExcessiveSelectorClasses": "error",
         "noFloatingClasses": "error",
         "noForIn": "error",
-        "noHexColors": "error",
+        "noHexColors": "off",
         "noImpliedEval": "error",
         "noIncrementDecrement": "error",
         "noInlineStyles": "error",
