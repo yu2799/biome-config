@@ -5,12 +5,16 @@ description: Create a Changesets version pull request for this repository. Use w
 
 # Release PR
 
-Use this skill to turn a release request into a reviewed release PR from
-`develop` to `main`. Do not publish directly by default.
+Use this skill to turn a release request into a reviewed Changesets version PR
+against `main`. Do not publish directly by default.
 
 ## Workflow
 
-1. Inspect release state before changing anything:
+1. Refresh branch state before changing anything:
+   - Run `git fetch --prune origin`.
+   - Switch to `main`.
+   - Fast-forward `main` to `origin/main`.
+2. Inspect release state before changing anything else:
    - `package.json`
    - `.changeset/config.json`
    - `.github/workflows/version.yml`
@@ -18,28 +22,31 @@ Use this skill to turn a release request into a reviewed release PR from
    - `CHANGELOG.md`
    - `git status --short --branch`
    - `git remote -v`
-2. Decide the release source:
-   - Normal changes must be merged to `develop`.
-   - If `.changeset/*.md` files exist on `develop`, wait for or create the
-     Changesets version PR against `develop`.
-   - If `develop` already has an updated `package.json` and `CHANGELOG.md`,
+3. Decide the release source:
+   - Normal changes must be merged to `main`.
+   - If `.changeset/*.md` files exist on `main`, wait for or create the
+     Changesets version PR against `main`.
+   - If `main` already has an updated `package.json` and `CHANGELOG.md`,
      treat it as the release candidate.
-   - If `develop` has releasable changes but no changeset and no version bump,
+   - If `main` has releasable changes but no changeset and no version bump,
      stop and ask for the intended semver bump and changelog text.
-3. Validate before creating a PR:
+4. Validate before creating a PR:
    - `pnpm run check`
    - `pnpm run pack:dry-run`
-4. Confirm package contents from dry-run:
+5. Confirm package contents from dry-run:
    - Must include `README.md`, `LICENSE`, `CHANGELOG.md`, `package.json`, and
      `configs/*.json`.
    - Must exclude `.changeset`, `.github`, `.vscode`, `.npm-cache`, `.tmp`,
      `node_modules`, lockfiles, and workspace-only config.
-5. Prepare the release PR:
-   - Create branch `codex/release-v<version>` from `develop`.
+6. Prepare the release PR:
+   - Create branch `release/v<version>` from `main`.
    - Before committing, summarize the diff and validation performed.
    - If no new commit is needed, do not create an empty commit.
    - Push the branch.
    - Create a Ready PR targeting `main` with title `Release v<version>`.
+   - Switch back to `main`.
+   - Delete the local release branch after the PR exists. Keep the remote branch
+     unless the user explicitly asks to delete it.
 
 ## PR Body
 

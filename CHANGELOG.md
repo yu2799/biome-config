@@ -1,5 +1,11 @@
 # @yu21/biome-config
 
+## 1.0.4
+
+### Patch Changes
+
+- Allow Playwright config files to use Node.js modules and `process.env`.
+
 ## 1.0.3
 
 ### Patch Changes
