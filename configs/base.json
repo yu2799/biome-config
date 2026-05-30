@@ -307,7 +307,16 @@
         "useNamingConvention": {
           "level": "error",
           "options": {
-            "strictCase": false
+            "strictCase": false,
+            "conventions": [
+              {
+                "formats": ["camelCase"],
+                "match": "VITE_[A-Z0-9_]+|(.+)",
+                "selector": {
+                  "kind": "objectLiteralProperty"
+                }
+              }
+            ]
           }
         },
         "useNodeAssertStrict": "error",

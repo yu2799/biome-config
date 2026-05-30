@@ -10,7 +10,7 @@ Shareable Biome configuration presets.
 pnpm add --save-dev --save-exact @biomejs/biome @yu21/biome-config
 ```
 
-This package expects `@biomejs/biome` `>=2.4.15 <3` in the consuming
+This package expects `@biomejs/biome` `>=2.4.16 <3` in the consuming
 project.
 
 ### Usage

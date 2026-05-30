@@ -1,6 +1,6 @@
 {
   "name": "@yu21/biome-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shareable Biome configuration presets.",
   "license": "MIT",
   "type": "module",
@@ -37,10 +37,10 @@
     "release": "changeset publish"
   },
   "peerDependencies": {
-    "@biomejs/biome": ">=2.4.15 <3"
+    "@biomejs/biome": ">=2.4.16 <3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.15",
+    "@biomejs/biome": "2.4.16",
     "@changesets/cli": "2.31.0",
     "@changesets/config": "3.1.4"
   }
