@@ -1,6 +1,6 @@
 {
   "name": "@yu21/biome-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Shareable Biome configuration presets.",
   "license": "MIT",
   "type": "module",

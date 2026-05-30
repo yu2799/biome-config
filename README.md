@@ -125,6 +125,6 @@ This repository uses pnpm for dependency management and npm for package
 publishing. npm publishing is expected to use Trusted Publishing from GitHub
 Actions.
 
-Changes are merged to `develop`. Changesets creates version pull requests
-against `develop`. Release pull requests merge `develop` into `main`, and
-`.github/workflows/release.yml` publishes from `main`.
+Changes are merged to `main`. Changesets creates version pull requests against
+`main`, and `.github/workflows/release.yml` publishes from `main` after version
+pull requests are merged.

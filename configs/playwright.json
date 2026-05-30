@@ -3,6 +3,22 @@
   "overrides": [
     {
       "includes": [
+        "playwright.config.{js,ts,mjs,cjs,mts,cts}",
+        "**/playwright.config.{js,ts,mjs,cjs,mts,cts}"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noNodejsModules": "off"
+          },
+          "style": {
+            "noProcessEnv": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
         "**/*.{spec,test,e2e,pw}.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
         "**/{e2e,playwright}/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}"
       ],
